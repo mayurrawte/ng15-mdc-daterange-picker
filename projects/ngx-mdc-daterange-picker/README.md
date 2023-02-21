@@ -10,10 +10,10 @@ A lightweight library to use angular 15+ datepicker with the labels on side to s
 
 ## Installation
 
-Install ngx-mdc-daterange-picker
+Install ngx-mdc-datepicker
 
 ```bash
-  npm install ngx-mdc-daterange-picker
+  npm install ngx-mdc-datepicker
 ```
 
 
@@ -33,7 +33,7 @@ export class AppModule {}
 ## Usage/Examples
 
 ```javascript
-<ngx-mdc-daterange-picker [(dateRange)]="dateRange"></ngx-mdc-daterange-picker>
+<ngx-mdc-daterangepicker [(dateRange)]="dateRange"></ngx-mdc-daterangepicker>
 ```
 
 ```typescript
