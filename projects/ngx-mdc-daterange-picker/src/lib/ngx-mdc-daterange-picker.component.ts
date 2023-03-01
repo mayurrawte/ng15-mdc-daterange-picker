@@ -42,10 +42,11 @@ import {MatFormFieldAppearance} from "@angular/material/form-field";
 export class NgxMdcDaterangePickerComponent implements OnInit {
   @Input() label = 'Enter a date range';
   @Input() appearance: MatFormFieldAppearance = 'fill';
+  @Input() dateFormat: string = 'DD/MM/YYYY';
+  @Input() dateLocale: string = 'en-GB';
   @Input() dateRange: { start: Date, end: Date } = {start: new Date(), end: new Date()};
   @Output() dateRangeChange: EventEmitter<any> = new EventEmitter<any>();
   @Output() dateSelected: EventEmitter<any> = new EventEmitter<any>();
-
 
   @ViewChild('dateRangeInput') dateRangeInput: any;
   @ViewChild(MatDateRangePicker, {static: false}) picker: any;
@@ -136,7 +137,7 @@ export class NgxMdcDaterangePickerComponent implements OnInit {
         label: 'Last 3 Month'
       },
       {
-        start: new Date(this.today.getFullYear() - 1, 1, 1),
+        start: new Date(this.today.getFullYear() - 1, 0, 1),
         end: new Date(this.today.getFullYear(), 0, 0),
         label: 'Previous Year'
       }
